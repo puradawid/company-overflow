@@ -1,4 +1,4 @@
-# Project: company-overflow
+# Project: company-overflow ![Travis status](https://travis-ci.org/puradawid/company-overflow.svg?branch=master)
 
 Look at StackOverflow users in your company - maybe they need a help? Help them, let the StackOverflow power go trough
 your company as well!
