@@ -36,3 +36,6 @@ bower.json
 
 # Ignore IntelliJ IDEA settings folder
 .idea
+
+# Ignore Spring files.
+/spring/*.pid
