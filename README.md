@@ -1,5 +1,7 @@
 # Project: company-overflow ![Travis status](https://travis-ci.org/puradawid/company-overflow.svg?branch=master)
 
+[![Join the chat at https://gitter.im/puradawid/company-overflow](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/puradawid/company-overflow?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Look at StackOverflow users in your company - maybe they need a help? Help them, let the StackOverflow power go trough
 your company as well!
 
