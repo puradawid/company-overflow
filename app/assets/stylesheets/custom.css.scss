@@ -1,0 +1,12 @@
+@import "bourbon";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/theme";
+
+//Forms
+.btn {
+    width: 100%;
+}
+input {
+    margin-bottom: 10px;
+}

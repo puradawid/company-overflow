@@ -36,8 +36,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#Templates engine
+# Templates engine
 gem 'haml'
+
+# Authentication
+gem 'devise'
+
+# Convert to haml
+gem 'html2haml'
 
 group :development, :test do
   #To use scaffolding with HAML
