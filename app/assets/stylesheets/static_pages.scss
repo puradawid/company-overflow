@@ -1,17 +1,7 @@
-.login-wrapper {
-  position: absolute;
-  width: 100%;
-  height: calc(100% - 50px);
-  top: 50px;
-  left: 0;
-  min-height: 400px;
-  .login-container {
-    width: 400px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -200px;
-    margin-top: -200px;
-    padding: 20px;
-  }
+.center-form-container {
+  width: 400px;
+  position: relative;
+  left: 50%;
+  margin-left: -200px;
+  padding: 20px;
 }

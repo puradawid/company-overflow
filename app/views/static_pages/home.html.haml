@@ -1,1 +1,10 @@
+.container
+  .row
+    - if !company_signed_in?
+      %h2 Welcome to Company Overflow
+      %p Look at StackOverflow users in your company - maybe they need a help? Help them, let the StackOverflow power go trough your company as well!
+    - else 
+      %h2 Thats your profile 'home'
+      %p There will be a lot of cool stuff here someday 
+
 
