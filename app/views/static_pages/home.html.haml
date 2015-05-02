@@ -3,6 +3,18 @@
     - if !company_signed_in?
       %h2 Welcome to Company Overflow
       %p Look at StackOverflow users in your company - maybe they need a help? Help them, let the StackOverflow power go trough your company as well!
+      %p To continue choose one from below:
+      .col-md-4
+        = link_to "Sign in", new_company_session_path, method: "get"
+        %p to browse your comapny questions
+      .col-md-4 
+        = link_to "Sign in", new_company_session_path, method: "get"
+        %p to your company dashboard
+      .col-md-4 
+        = link_to "Sign up", new_company_registration_path, method: "get"
+        %p your company
+
+
     - else 
       %h2 Thats your profile 'home'
       %p There will be a lot of cool stuff here someday 
