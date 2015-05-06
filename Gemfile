@@ -42,6 +42,10 @@ gem 'haml'
 # Authentication
 gem 'devise'
 
+# Omniauth
+gem 'omniauth'
+gem 'omniauth-stackexchange'
+        
 # Convert to haml
 gem 'html2haml'
 

@@ -1,11 +1,11 @@
 .container
   .row
-    - if !company_signed_in?
+    - if !company_signed_in? && !user_signed_in?
       %h2 Welcome to Company Overflow
       %p Look at StackOverflow users in your company - maybe they need a help? Help them, let the StackOverflow power go trough your company as well!
       %p To continue choose one from below:
       .col-md-4
-        = link_to "Sign in", new_company_session_path, method: "get"
+        = link_to "Sign in", user_omniauth_authorize_path(:stackexchange)
         %p to browse your comapny questions
       .col-md-4 
         = link_to "Sign in", new_company_session_path, method: "get"
@@ -13,10 +13,11 @@
       .col-md-4 
         = link_to "Sign up", new_company_registration_path, method: "get"
         %p your company
-
-
-    - else 
-      %h2 Thats your profile 'home'
+    - elsif company_signed_in? 
+      %h2 Thats your company profile 'home'
+      %p There will be a lot of cool stuff here someday 
+    - elsif user_signed_in?
+      %h2 Thats your user  profile 'home'
       %p There will be a lot of cool stuff here someday 
 
 
