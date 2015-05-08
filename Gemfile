@@ -49,6 +49,9 @@ gem 'omniauth-stackexchange'
 # Convert to haml
 gem 'html2haml'
 
+# Nested secrets.yml enable
+gem 'dot_secrets', github: 'rono23/dot_secrets'
+
 group :development, :test do
   #To use scaffolding with HAML
   gem 'haml-rails'

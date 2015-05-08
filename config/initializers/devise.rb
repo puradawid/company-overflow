@@ -233,7 +233,11 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth  :stackexchange, "4744", ")1r0YG8PJmMRn9fcNfz5iQ((", public_key: "RmMsBI6y5mNbGrqGWyJP)Q((", site: 'stackoverflow'
+  config.omniauth :stackexchange,
+                  Rails.application.secrets.stack_exchange.app_id,
+                  Rails.application.secrets.stack_exchange.app_secret,
+                  public_key: Rails.application.secrets.stack_exchange.public_key,
+                  site: 'stackoverflow'
   
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
