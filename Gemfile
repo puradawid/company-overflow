@@ -47,7 +47,7 @@ gem 'omniauth-stackexchange'
 # Convert to haml
 gem 'html2haml'
 
-group :development, :test, :production do
+group :development, :test do
   # Define datasource for other than heroku (for now)
   gem 'sqlite3'
 end
@@ -79,6 +79,6 @@ group :test do
   gem 'guard-minitest'
 end
 
-group :heroku_dev do
+group :heroku_dev, :production do
   gem 'pg'
 end
