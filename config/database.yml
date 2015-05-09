@@ -23,3 +23,8 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+heroku_dev:
+  <<: *default
+  adapter: postgresql
+  database: heroku_dev_db

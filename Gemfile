@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 #Bootstrap3
 gem 'bootstrap-sass', '~> 3.3.4'
 # Use SCSS for stylesheets
@@ -49,6 +47,11 @@ gem 'omniauth-stackexchange'
 # Convert to haml
 gem 'html2haml'
 
+group :development, :test, :production do
+  # Define datasource for other than heroku (for now)
+  gem 'sqlite3'
+end
+
 # Nested secrets.yml enable
 gem 'dot_secrets', github: 'rono23/dot_secrets'
 
@@ -76,4 +79,6 @@ group :test do
   gem 'guard-minitest'
 end
 
-
+group :heroku_dev do
+  gem 'pg'
+end
