@@ -43,7 +43,10 @@ gem 'devise'
 # Omniauth
 gem 'omniauth'
 gem 'omniauth-stackexchange'
-        
+
+# StackOverflow API
+gem 'ruby-stackoverflow'
+
 # Convert to haml
 gem 'html2haml'
 
