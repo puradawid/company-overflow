@@ -8,7 +8,7 @@ describe 'Authentication' do
     let(:company) { FactoryGirl::create(:company) }
     before do
       OmniAuth.config.add_mock(:stackexhange,
-                               credencials: { oauth_token: 123,
+                               credentials: { oauth_token: 123,
                                               refresh_token: 321,
                                               oauth_expires_at: Time.now + 1.day
                                             })
