@@ -4,8 +4,8 @@
       %h2 Welcome to Company Overflow
       %p Look at StackOverflow users in your company - maybe they need a help? Help them, let the StackOverflow power go trough your company as well!
       %p To continue choose one from below:
-      .col-md-4
-        = link_to "Sign in", user_omniauth_authorize_path(:stackexchange)
+      #sign_in_to_se.col-md-4
+        = link_to "Sign in StackExchange", user_omniauth_authorize_path(:stackexchange)
         %p to browse your company questions
       .col-md-4 
         = link_to "Sign in", new_company_session_path, method: "get"

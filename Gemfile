@@ -47,6 +47,10 @@ gem 'omniauth-stackexchange'
 # StackOverflow API
 gem 'ruby-stackoverflow'
 
+# RSpec for BDD testing
+gem 'rspec'
+gem 'rspec-rails', '~>3.0'
+
 # Convert to haml
 gem 'html2haml'
 
@@ -80,6 +84,14 @@ group :test do
   gem 'mini_backtrace'
 
   gem 'guard-minitest'
+
+  gem 'capybara'
+
+  gem 'selenium-webdriver'
+
+  gem 'guard-rspec'
+
+  gem 'factory_girl_rails'
 end
 
 group :heroku_dev, :production do
