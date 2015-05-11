@@ -44,6 +44,25 @@ describe 'Authentication' do
     end
   end
 
+  context 'sign up' do
+    let(:company) { FactoryGirl::build(:company) }
+    
+    context 'the company' do
+      before do
+        visit root_path
+        click_on 'Sign up'
+        fill_in 'Email', with: company.email
+        fill_in 'Password', with: company.password
+        fill_in 'Password confirmation', with: company.password
+        click_on 'Sign up'
+      end
+
+      it 'should have a new company with this email' do
+        expect(Company.where(email: company.email)).not_to be_empty
+      end
+    end
+  end
+
   def log_in(email, password)
     fill_in 'Email', with: email
     fill_in 'Password', with: password
