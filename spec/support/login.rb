@@ -22,10 +22,10 @@ shared_context 'login' do
   end
 
   def mock_omniauth
+    credentials_hash = { oauth_token: 123,
+                         refresh_token: 321,
+                         oauth_expires_at: Time.now + 1.day }
     OmniAuth.config.add_mock(:stackexchange,
-                                   credentials: { oauth_token: 123,
-                                                  refresh_token: 321,
-                                                  oauth_expires_at: Time.now + 1.day
-                                                })
+                             credentials: credentials_hash)
   end
 end
