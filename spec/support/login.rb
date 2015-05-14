@@ -21,6 +21,10 @@ shared_context 'login' do
     click_on 'Sign up'
   end
 
+  def log_out
+    click_on 'Log out'
+  end
+
   def mock_omniauth
     credentials_hash = { oauth_token: 123,
                          refresh_token: 321,
