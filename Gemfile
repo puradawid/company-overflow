@@ -47,6 +47,9 @@ gem 'omniauth-stackexchange'
 # StackOverflow API
 gem 'ruby-stackoverflow'
 
+# Email validator for form
+gem 'email_validator'
+
 # RSpec for BDD testing
 gem 'rspec'
 gem 'rspec-rails', '~>3.0'

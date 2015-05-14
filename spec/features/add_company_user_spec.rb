@@ -4,7 +4,10 @@ require 'support/login.rb'
 describe 'Manage company users' do
   include_context 'login'
   subject { page } 
-  before(:all) { OmniAuth.config.test_mode = true }
+  before(:all) do 
+    OmniAuth.config.test_mode = true
+    Rails.application.routes.default_url_options[:host] = 'localhost'
+  end
 
   context 'add' do
     let(:company) { FactoryGirl::create(:company) }
@@ -27,9 +30,9 @@ describe 'Manage company users' do
 
     it 'allows register into group by clicking the link' do
       log_out
-      link = %r{http(s*)://(\S*)}.match(mail.body.to_s)[0]
-      visit link
-      expect(page.status_code).to eq '200'
+      mail_page = Capybara.string(mail.body.to_s)
+      visit mail_page.find('a').text
+      expect(page.status_code).to eq 200
     end
   end
 end

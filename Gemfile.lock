@@ -88,6 +88,8 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    email_validator (1.6.0)
+      activemodel
     erubis (2.7.0)
     execjs (2.4.0)
     factory_girl (4.5.0)
@@ -324,6 +326,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   dot_secrets!
+  email_validator
   factory_girl_rails
   guard
   guard-minitest

@@ -1,0 +1,8 @@
+%h1 Welcome in company management
+Here you can manage your members in company, see what you can do here!
+#invite_member
+  = form_tag members_invite_path, method: :post do
+    = label :invitation, :email
+    = email_field :invitation, :email
+    = submit_tag "Invite"
+
